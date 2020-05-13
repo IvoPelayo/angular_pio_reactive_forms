@@ -3,20 +3,20 @@
 <mat-card *ngIf="devList.length > 0">
     <mat-table #table [dataSource]="devList" class="mat-elevation-z8">
         <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> Dev Id </th>
-            <td mat-cell *matCellDef="let element"> {{element.dev.id}} </td>
-          </ng-container>
+            <mat-header-cell *matHeaderCellDef> Dev Id </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dev.id}} </mat-cell>
+        </ng-container>
         <ng-container matColumnDef="description">
           <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.dev.description}} </mat-cell>
         </ng-container>
-        <ng-container matColumnDef="startDate">
+        <ng-container matColumnDef="beginDate">
           <mat-header-cell *matHeaderCellDef> Fecha de Ingreso </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{ element.startDate | amDateFormat: 'dd-MM-yyyy' }} </mat-cell>
+          <mat-cell *matCellDef="let element"> {{ element.beginDate | amDateFormat: 'DD-MM-YYYY' }} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="endDate">
           <mat-header-cell *matHeaderCellDef> Fecha de egreso </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{ element.startDate | amDateFormat: 'dd-MM-yyyy' }} </mat-cell>
+          <mat-cell *matCellDef="let element"> {{ element.endDate? (element.endDate | amDateFormat: 'DD-MM-YYYY') : '' }} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="updateDate">
             <mat-header-cell *matHeaderCellDef> Fecha de creación </mat-header-cell>

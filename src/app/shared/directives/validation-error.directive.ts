@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FORM_ERRORS } from '../utils/validation/error.messages';
-import { MatFormField } from '@angular/material';
+import { MatFormField } from '@angular/material/form-field';
 import { FormGroupDirective } from '@angular/forms';
 
 @Directive({
@@ -45,7 +45,7 @@ export class ValidationErrorDirective implements AfterViewInit, OnDestroy {
         let text = null;
         if (errors) {
             const firstKey = Object.keys(errors)[0];
-            const text = this.errors[firstKey];
+            text = this.errors[firstKey];
         }
 
         this.el.nativeElement.hidden = text ? false : true;

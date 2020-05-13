@@ -16,18 +16,17 @@
     "@angular/common": "~9.1.6",
     "@angular/compiler": "~9.1.6",
     "@angular/core": "~9.1.6",
-    "@angular/flex-layout": "^8.0.0-beta.27",
+    "@angular/flex-layout": "^9.0.0-beta.29",
     "@angular/forms": "~9.1.6",
-    "@angular/material": "^8.2.3",
-    "@angular/material-moment-adapter": "^8.2.3",
+    "@angular/material": "^9.2.3",
+    "@angular/material-moment-adapter": "^9.2.3",
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "angular2-notifications": "^2.0.0",
     "moment": "2.24.0",
     "ngx-moment": "3.5.0",
     "rxjs": "~6.5.5",
-    "tslib": "^1.10.0",
+    "tslib": "^1.12.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -38,6 +37,6 @@
     "@types/node": "^12.11.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.7.2"
   }
 }

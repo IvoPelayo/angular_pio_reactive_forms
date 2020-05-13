@@ -48,12 +48,15 @@ export class AppFormComponent implements OnInit{
 
   //#region .: Public Methods :.
   saveDev() {
-    const dev = this.form.getRawValue();
-    this.onDevAdded.emit(dev);
+    if(this.form.valid){
+      const dev = this.form.getRawValue();
+      this.onDevAdded.emit(dev);
+      this.clear();
+    }
   }
 
   clear() {
-    this.form.patchValue({});
+    this.form.reset();
   }
 
   //#endregion
@@ -64,7 +67,7 @@ export class AppFormComponent implements OnInit{
     // map request on form
     this.form = new FormGroup({
       id: new FormControl(0),
-      updateDate: new FormControl(moment.utc()),
+      updateDate: new FormControl(moment()),
       dev: new FormControl(null, [ Validators.required ]),
       beginDate: new FormControl(null, [ Validators.required ]),
       endDate: new FormControl(null),

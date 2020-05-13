@@ -1,9 +1,9 @@
 <mat-card *ngIf="form">
-    <form [formGroup]="form" (onSubmit)="saveDev()">
+    <form [formGroup]="form" (ngSubmit)="saveDev()">
         <div fxLayout="row" fxLayoutAlign="center center">
             <mat-form-field appearance="outline" fxFlex>
             <mat-label>Desarrollador</mat-label>
-            <mat-select formControlName="devId"
+            <mat-select formControlName="dev"
                         disableOptionCentering>
                 <mat-option *ngFor="let dev of devs" [value]="dev">
                     {{ dev.description }}
@@ -30,7 +30,7 @@
         </div>
         <mat-error validationMessages></mat-error>
         <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
-            <button type="button" mat-outline-button color="secondary" (click)="clear()">Limpiar</button>
+            <button type="button" mat-stroked-button color="secondary" (click)="clear()">Limpiar</button>
             <button type="submit" mat-raised-button color="primary">Guardar</button>
         </div>
     </form>

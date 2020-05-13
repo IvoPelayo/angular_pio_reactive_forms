@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   devList: Array<any> = [];
-  displayedColumns: string[] = ['id', 'description', 'startDate', 'endDate', 'updateDate'];
+  displayedColumns: string[] = ['id', 'description', 'beginDate', 'endDate', 'updateDate'];
 
   constructor(){
 
