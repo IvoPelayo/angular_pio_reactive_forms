@@ -1,0 +1,37 @@
+<mat-card *ngIf="form">
+    <form [formGroup]="form" (onSubmit)="saveDev()">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Desarrollador</mat-label>
+            <mat-select formControlName="devId"
+                        disableOptionCentering>
+                <mat-option *ngFor="let dev of devs" [value]="dev">
+                    {{ dev.description }}
+                </mat-option>
+            </mat-select>
+            <mat-error validationMessages></mat-error>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around none" fxLayoutGap="10px" margin-top>
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha de ingreso</mat-label>
+                <input matInput [matDatepicker]="bdPicker" formControlName="beginDate" disableOptionCentering>
+                <mat-datepicker-toggle matSuffix [for]="bdPicker"></mat-datepicker-toggle>
+                <mat-datepicker #bdPicker></mat-datepicker>
+                <mat-error validationMessages></mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha de egreso</mat-label>
+                <input matInput [matDatepicker]="edPicker" formControlName="endDate" disableOptionCentering>
+                <mat-datepicker-toggle matSuffix [for]="edPicker"></mat-datepicker-toggle>
+                <mat-datepicker #edPicker></mat-datepicker>
+                <mat-error validationMessages></mat-error>
+            </mat-form-field>
+        </div>
+        <mat-error validationMessages></mat-error>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+            <button type="button" mat-outline-button color="secondary" (click)="clear()">Limpiar</button>
+            <button type="submit" mat-raised-button color="primary">Guardar</button>
+        </div>
+    </form>
+</mat-card>
