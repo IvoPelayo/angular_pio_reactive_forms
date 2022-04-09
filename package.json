@@ -23,7 +23,7 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "ngx-moment": "3.5.0",
     "rxjs": "~6.5.5",
     "tslib": "^1.12.0",
